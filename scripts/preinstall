@@ -1,0 +1,12 @@
+#!/bin/bash
+
+MAIN_LD="$3/Library/LaunchDaemons/com.elliotjordan.auto_update_magic.plist"
+
+# Unload LaunchDaemon.
+if [[ -f "$MAIN_LD" ]]; then
+    echo "Unloading and removing $MAIN_LD..."
+    launchctl unload -w "$MAIN_LD"
+    rm -r "$MAIN_LD"
+fi
+
+exit 0

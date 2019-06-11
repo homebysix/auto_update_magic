@@ -1,15 +1,16 @@
 <policy>
     <general>
-        <name>%PROD_NAME%</name>
+        <name>Auto Update %PROD_NAME%</name>
         <enabled>true</enabled>
         <frequency>Ongoing</frequency>
         <category>
             <name>%POLICY_CATEGORY%</name>
         </category>
-        <trigger_other>selfservice-%PROD_NAME%</trigger_other>
+    <trigger_startup>true</trigger_startup>
+        <trigger_other>autoupdate-%PROD_NAME%</trigger_other>
     </general>
     <scope>
-        <all_computers>true</all_computers>
+        <!--Scope added by JSSImporter-->
     </scope>
     <package_configuration>
         <!--Package added by JSSImporter-->
@@ -17,11 +18,6 @@
     <scripts>
         <!--Scripts added by JSSImporter-->
     </scripts>
-    <self_service>
-        <use_for_self_service>true</use_for_self_service>
-        <install_button_text>Install %VERSION%</install_button_text>
-        <self_service_description>%SELF_SERVICE_DESCRIPTION%</self_service_description>
-    </self_service>
     <maintenance>
         <recon>false</recon>
     </maintenance>
